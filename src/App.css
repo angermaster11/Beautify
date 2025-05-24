@@ -1,3 +1,59 @@
+/* Add this at the top of your CSS */
+html, body, #root, .app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Update your .app class */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #fff9fb;
+}
+
+/* Update main-content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Update hero-section */
+.hero-section {
+  height: 40vh; /* Changed from fixed height */
+  min-height: 300px;
+  /* rest of your hero styles */
+}
+
+/* Add this new class for the content wrapper */
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Update upload-section */
+.upload-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Update footer positioning */
+.footer {
+  width: 100%;
+  /* rest of your footer styles */
+}
 /* Base Styles */
 :root {
   --primary-color: #ff6b8b;
@@ -307,5 +363,33 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    margin: 0 -1rem;
+    border-radius: 0;
+  }
+  
+  .file-upload-label {
+    padding: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }
